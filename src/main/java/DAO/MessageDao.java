@@ -1,5 +1,6 @@
 package DAO;
- import static org.mockito.Mockito.reset;
+
+import static org.mockito.Mockito.reset;
 
 import java.beans.Statement;
 import java.sql.Connection;
@@ -11,10 +12,9 @@ import Model.Message;
 import Util.ConnectionUtil;
 import java.util.*;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
+ 
 
-
-public class MessageDao {
-    
+public class MessageDao{
     
     //it's for creating a new message
     public Message createMessage(Message msg){

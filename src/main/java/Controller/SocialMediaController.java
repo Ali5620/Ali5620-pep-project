@@ -127,42 +127,13 @@ public class SocialMediaController {
         Model.Message msg2=messageService.getMessageById(msg_id);
         if(msg2==null)
         {
-                  ctx.status(200);//OK
+                  ctx.status(200);
                   return;
         }else
         ctx.json(msg2);
-        ctx.status(200);//OK
+        ctx.status(200);
        
   }
-      // private void deleteByMessageId(Context ctx) throws JsonMappingException, JsonProcessingException, SQLException,MismatchedInputException{
-      //   // try{ 
-      //    ObjectMapper om=new ObjectMapper();
-      //     Message msg=om.readValue(ctx.body(),Message.class);
-      //     int msg_id = Integer.parseInt(ctx.pathParam("message_id"));
-      //   Message toBeDeleted_message=messageService.getMessageById(msg_id);
-      //   System.out.println(toBeDeleted_message);
-      //   MessageDao md=new MessageDao();
-      //   if(md.isMessageExist(msg_id) && toBeDeleted_message!=null)
-      //   {
-      //         messageService.deleteMessageById(msg);
-      //         ctx.json(toBeDeleted_message);
-      //         ctx.status(200);
-      //         return;
-      //   }else{
-      //      ctx.status(200); //msg_not exist //ok
-      //      return;
-      //   }
-     
-        //  ctx.json(messageService.getMessageById(msg.getMessage_id()));
-        // messageService.deleteMessageById(msg);
-
-        //       ctx.status(200);
-        //        return;
-        // messageService.deleteMessageById(msg);
-        // ctx.json(msg.getMessage_id());
-        // ctx.status(200); //ok
-        // return;
-
 
  private void deleteBymessageId(Context ctx) {
           int messageId=ctx.pathParamAsClass("message_id", Integer.class).get();
